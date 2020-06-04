@@ -1,0 +1,152 @@
+.subtitulo {
+    color: #0171AF;
+    font-size: 20px;
+    padding-top: 1rem;
+}
+
+#contenedorUsuariosyLibros {
+    margin: 0;
+    padding: 0;
+}
+
+.imagenUsuario {
+    width: 100px;
+    position: absolute;
+    display: block;
+    left: 14%;
+}
+
+.infoUsuario {
+    position: absolute;
+    display: block;
+    font-size: 17px;
+    right: 8%;
+    line-height: 25px;
+}
+
+.resultadoLibros {
+    margin-bottom: 10rem;
+    margin-top: 2rem;
+}
+
+.datosLibro {
+    display: block;
+    position: relative;
+    width: 460px;
+    line-height: 30px;
+}
+
+.imagenLibro {
+    position: absolute;
+    display: block;
+    left: 0;
+}
+
+.infoLibro {
+    position: absolute;
+    display: block;
+    font-size: 17px;
+    left: 30%;
+    text-transform: uppercase;
+}
+
+div#contenedorlibroComprado {
+    position: relative;
+    padding-top: 2rem;
+    width: 460px;
+}
+
+div#contenedorlibroComprado.imagenLibroComprado {
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+    width: 200px; 
+}
+
+.infoLibroComprado {
+    position: absolute;
+    left: 59%;
+    top: 13px;
+    margin-top: 20px;
+}
+
+.tituloLibroComprado {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+.pLibroComprado {
+    line-height: 20px;
+    font-size: 17px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.boton {
+    background-color: #0171AF;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px 6px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.boton:hover {
+    text-decoration: none;
+    background-color: white;
+    color: #0171AF;
+    transition: .5s;
+}
+
+input[type="text"], input[type="password"] {
+    outline: none;
+    padding: 20px;
+    display: block;
+    width: 250px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    margin: 20px auto;
+}
+
+input[type="file"] {
+    margin: 20px auto;
+}
+label {
+    margin: 20px auto;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    color: #fff;
+    background: #0098cb;
+    width: 250px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px auto;
+    margin-top: 0;
+    margin-left: 102px;
+}
+
+hr {
+    width: 100%;
+    background-color: #ccc;
+    height: 2px;
+    margin-top: 15px;
+}
+
+.librosUsuario {
+    width:100%;
+    margin-top: 1rem;
+}
+
+.botonLibros {
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.botonLibros:hover {
+    text-decoration: none;
+}
