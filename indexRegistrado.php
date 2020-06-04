@@ -57,7 +57,7 @@ $query = mysqli_query($enlace, "select * from usuarios");
     <h2 class="subtitulo">Conoce el catalogo que acada usuario posee</h2>
     <div id="contenedorUsuariosyLibros">
     <?php
-        $queryLibros = mysqli_query($enlace, "select * from libros where not idUsuario=$idUsuario");
+    $queryLibros = mysqli_query($enlace, "select * from libros where not idUsuario=$idUsuario");
         while($resultadoLibros = mysqli_fetch_array($queryLibros)) {
             echo '
                 <div class="resultadoLibros">
@@ -75,7 +75,7 @@ $query = mysqli_query($enlace, "select * from usuarios");
                 </div>
                 <hr>
             ';
-        }    
+        }            
     ?>
     </div>
 

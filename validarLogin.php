@@ -12,10 +12,11 @@ $link = conectar();
     $lugarVenta = $_POST['lugarVenta'];
 
     $query = mysqli_query($link, "insert into usuarios (nombreUsuario, matriculaUsuario, carreraUsuario, telefono, mail, lugarVenta) values ('$nombre', '$matricula', '$carrera', '$telefono', '$email', '$lugarVenta')");
-    
-    $_SESSION['usuario'] = $nombre;
+    $idQuery = mysqli_query($link, "select idUsuario from usuarios where matriculaUsuario='$matricula'");
+    $resIdUsuario = mysqli_fetch_array($idQuery);
 
-    $usuario = $_SESSION['usuario'];
+    $_SESSION['idUsuario'] = $resIdUsuario[0];
+    $_SESSION['usuario'] = $nombre;
 
     header("Location: indexRegistrado.php");
 

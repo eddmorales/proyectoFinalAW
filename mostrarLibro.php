@@ -69,7 +69,7 @@ mysqli_close($enlace);
     <?php
     
         echo '
-            <div class="resultadoLibros">
+            <div class="resultadoLibrosMostrado">
                 <h3 style="font-size: 18px; margin-bottom: 1rem;">Dueño del libro</h3>
                 <div class="datosLibro">
                     <div class="imagenLibro">

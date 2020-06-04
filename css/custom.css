@@ -34,6 +34,11 @@ div.datosUsuario .infoUsuario {
     margin-top: 2rem;
 }
 
+.resultadoLibrosMostrado {
+    margin-bottom: 14rem;
+    margin-top: 2rem;
+}
+
 .datosLibro {
     display: block;
     position: relative;
