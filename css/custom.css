@@ -9,14 +9,19 @@
     padding: 0;
 }
 
-.imagenUsuario {
+.datosUsuario {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+div.datosUsuario .imagenUsuario {
     width: 100px;
     position: absolute;
     display: block;
     left: 14%;
 }
 
-.infoUsuario {
+div.datosUsuario .infoUsuario {
     position: absolute;
     display: block;
     font-size: 17px;
@@ -25,7 +30,7 @@
 }
 
 .resultadoLibros {
-    margin-bottom: 10rem;
+    margin-bottom: 14rem;
     margin-top: 2rem;
 }
 

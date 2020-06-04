@@ -17,10 +17,10 @@ $idUsuario = $_GET['idUsuario'];
 
 
 $queryUsuario = mysqli_query($enlace, "select * from usuarios where idUsuario = $idUsuario");
-$queryLibros = mysqli_query($enlace, "select * from libros where idLibro = $idLibro");
+$queryLibro = mysqli_query($enlace, "select * from libros where idLibro = $idLibro");
 
 $resUsuario = mysqli_fetch_array($queryUsuario);
-$resLibros = mysqli_fetch_array($queryLibros);
+$resLibro = mysqli_fetch_array($queryLibro);
 
 mysqli_close($enlace);
 ?>
@@ -65,40 +65,44 @@ mysqli_close($enlace);
 
 
     <h2 class="subtitulo">Comprueba tu libro y concreta la venta</h2>
-        <?php
-            echo '
-                <div class="datosUsuario">
-                    <img class="imagenUsuario" src='.$resUsuario[1].' alt="Imagen del usuario">
-
-                    <div class="infoUsuario">
+    <div id="contenedorUsuariosyLibros">
+    <?php
+    
+        echo '
+            <div class="resultadoLibros">
+                <h3 style="font-size: 18px; margin-bottom: 1rem;">Dueño del libro</h3>
+                <div class="datosLibro">
+                    <div class="imagenLibro">
+                        <img src='.$resUsuario[1].' alt="Imagen del usuario" style="width: 100px;">
+                    </div>
+                    <div class="infoLibro">
                         <p style="text-transform: uppercase;">Nombre: '.$resUsuario[2].'</p>
                         <p>Tel de contacto: '.$resUsuario[5].'</p>
                         <p>Email de contacto: '.$resUsuario[6].'</p>
                         <p>Lugar de venta: '.$resUsuario[7].'</p>    
                     </div>
                 </div>
-            ';
-            
-            echo '
-                    <div class="resultadoLibros">
-                        <h3 style="font-size: 18px; margin-bottom: 1rem;">Libro disponible para su venta</h3>
-                        <div class="datosLibro">
-                            <div class="imagenLibro">
-                                <img src='.$resLibros[5].' alt="Imagen del usuario" style="width: 100px;">
-                            </div>
-                            <div class="infoLibro">
-                                <p>'.$resLibros[1].'</p>
-                                <p>$ '.$resLibros[4].'</p>
-                                <a href="comprarLibro.php?idLibro='.$resLibros[0].'" class="boton">Comprar Libro</a>
-                            </div>
-                        </div>
+            </div>
+
+            <div class="resultadoLibros">
+                <h3 style="font-size: 18px; margin-bottom: 1rem;">Libro disponible para su venta</h3>
+                <div class="datosLibro">
+                    <div class="imagenLibro">
+                        <img src='.$resLibro[5].' alt="Imagen del usuario" style="width: 100px;">
                     </div>
-                ';
-                
-
-            //echo "<hr>";
-        ?>
-
+                    <div class="infoLibro">
+                        <p>'.$resLibro[1].'</p>
+                        <p>$ '.$resLibro[4].'</p>
+                        <a href="comprarLibro.php?idLibro='.$resLibro[0].'" class="boton">Comprar Libro</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        ';
+        
+    
+    ?>
+    </div>
 </div>
 
 <div class="right"> 

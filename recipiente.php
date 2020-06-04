@@ -1,4 +1,18 @@
-echo '
+<?php
+            echo '
+                <div class="datosUsuario">
+                    <img class="imagenUsuario" src='.$resUsuario[1].' alt="Imagen del usuario">
+
+                    <div class="infoUsuario">
+                        <p style="text-transform: uppercase;">Nombre: '.$resUsuario[2].'</p>
+                        <p>Tel de contacto: '.$resUsuario[5].'</p>
+                        <p>Email de contacto: '.$resUsuario[6].'</p>
+                        <p>Lugar de venta: '.$resUsuario[7].'</p>    
+                    </div>
+                </div>
+            ';
+            
+            echo '
                     <div class="resultadoLibros">
                         <h3 style="font-size: 18px; margin-bottom: 1rem;">Libro disponible para su venta</h3>
                         <div class="datosLibro">
@@ -13,3 +27,7 @@ echo '
                         </div>
                     </div>
                 ';
+                
+
+            //echo "<hr>";
+        ?>
