@@ -45,12 +45,12 @@ mysqli_close($enlace);
 
 <div id="menu">
 <ul>
-<li><a href="index.php">Inicio</a></li>
+<li><a href="indexRegistrado.php">Inicio</a></li>
 <li><a href="login.php">Registrarse</a></li>
 <li><a href="signup.php">Iniciar Sesión</a></li>
-<li><a href="#">Links</a></li>
-<li><a href="#">Forum</a></li>
-<li><a href="#">Free Stuff</a></li>
+<li><a href="miPerfil.php">Mi Perfil</a></li>
+<li><a href="miPerfil.php#misLibros">Mis Libros</a></li>
+<li><a href="cerrarSesion.php">Cerrar Sesión</a></li>
 </ul>
 </div>
 

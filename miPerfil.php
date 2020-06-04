@@ -40,7 +40,7 @@
 <li><a href="login.php">Registrarse</a></li>
 <li><a href="signup.php">Iniciar Sesión</a></li>
 <li><a href="miPerfil.php">Mi Perfil</a></li>
-<li><a href="#">Forum</a></li>
+<li><a href="miPerfil.php#misLibros">Mis Libros</a></li>
 <li><a href="cerrarSesion.php">Cerrar Sesión</a></li>
 </ul>
 </div>
@@ -53,7 +53,7 @@
     <img src="images/principal.jpg" alt="Example pic" style="width: 450px; border: 3px solid #ccc;" />
     <br /><br />
     <h2 style="text-align: center;">Bienvenido <?php echo "<span style='text-transform: uppercase;'>".$_SESSION['usuario']."</span>";?> </h2>
-        <p style="text-align: center; margin-top: 15px; font-size: 17px;">Estos son tus libros hasta el momento</p>
+        <p id="misLibros" style="text-align: center; margin-top: 15px; font-size: 17px;">Estos son tus libros hasta el momento</p>
         <p style="text-align: center; margin-top: 15px; font-size: 17px;"><a href="nuevoLibro.php">Añadir nuevo libro</a></p>
         <div class="librosUsuario">
             <?php
