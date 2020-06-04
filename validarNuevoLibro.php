@@ -32,7 +32,7 @@
     }
 
     if($query) {
-        header("Location: indexRegistrado.php");
+        header("Location: miPerfil.php#misLibros");
     } else if(!$query && isset($idLibro)) {
         header("Location: actualizarLibro.php");
     } else if(!$query && !isset($idLibro)) {
