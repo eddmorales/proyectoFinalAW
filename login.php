@@ -1,12 +1,20 @@
+<?php
+
+    include("keys.php");
+
+?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Venta de Libros</title>
+<title>Login</title>
 <meta http-equiv="Content-Language" content="English" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<script src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>"></script>
+
 </head>
 <body>
 
@@ -39,13 +47,14 @@
 
     <h2 style="text-align: center;">Registrate</h2>
 
-    <form action="validarLogin.php" method="post">
+    <form action="validarLogin.php" method="post" id="form">
         <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
         <input type="text" name="matricula" placeholder="Ingresa tu matricula" required>
         <input type="text" name="carrera" placeholder="Ingresa tu carrera" required>
         <input type="text" name="telefono" placeholder="Ingreesa tu telefono" required>
         <input type="text" name="email" placeholder="Ingresa tu Email" required>
         <input type="text" name="lugarVenta" placeholder="Donde te gustaría hacer la compra" required>
+        <input type="hidden" name="googleResponseToken" id="googleResponse">
 
         <input type="submit" value="Registrarse">
     </form>
@@ -106,4 +115,19 @@ Designed by <a href="http://www.free-css-templates.com/">Free CSS Templates</a>,
 
 </body>
 </html>
+
+<script type="text/javascript">
+
+    const enviar = document.getElementById('form');
+
+    const captcha = document.getElementById('googleResponse');
+
+    console.log(captcha.value);
+
+        grecaptcha.ready(function() {
+          grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'}).then(function(token) {
+              captcha.value = token;
+          });   
+        });
+</script>
 
